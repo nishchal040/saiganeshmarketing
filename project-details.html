@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Project Case Study - Sai Ganesh Marketing">
+    <meta name="description" content="Explore comprehensive case study and material specifications for projects supplied and executed by Sai Ganesh Marketing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "d8Xof0hc2vSF4VBBG",
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title id="page-title">Project Case Study - Sai Ganesh Marketing</title>
+</head>
+<body>
+    <!-- WhatsApp Floating Action -->
+    <div class="whatsapp">
+        <a href="https://wa.me/919989640450" target="_blank" rel="noopener noreferrer">
+            <img src="assets/whatsapp.webp" alt="WhatsApp">
+        </a>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="contact-form">
+        <img src="assets/close-icon.png" alt="Close" id="close-btn">
+        <span class="section-tag" style="margin-bottom: 10px;">PROJECT INQUIRY</span>
+        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 5px;">Request a Quote</h3>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 20px;">Let us know your project requirements and our engineering team will get back to you shortly.</p>
+        <form onsubmit="sendMail(event)">
+            <input type="text" id="name" placeholder="Your Full Name *" required>
+            <input type="email" id="email" placeholder="Email Address *" required>
+            <input type="tel" id="number" placeholder="Phone Number *" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select Requirement Category *</option>
+                <option value="Sanitaryware">Sanitaryware & Bath Fittings</option>
+                <option value="Tiles">Tiles & Flooring</option>
+                <option value="Plumbing">Plumbing Pipes & Fittings</option>
+                <option value="Electrical">Electrical & Lighting</option>
+                <option value="Bulk Project Supply">Bulk Project / Commercial Supply</option>
+            </select>
+            <input type="text" id="area" placeholder="Location / Project Area (e.g. Hyderabad)">
+            <textarea id="message" rows="3" placeholder="Tell us more about your project specifications..."></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 4px;">SUBMIT INQUIRY <span class="arrow">→</span></button>
+        </form>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#c5a059" stroke-width="3" fill="#12351A"/>
+                    <path d="M35 60 C 35 40, 50 30, 65 40 C 70 45, 70 55, 65 60 C 55 70, 40 70, 35 60" stroke="#c5a059" stroke-width="6" stroke-linecap="round" fill="none"/>
+                    <path d="M65 40 C 65 60, 50 70, 35 60 C 30 55, 30 45, 35 40 C 45 30, 60 30, 65 40" stroke="#f3e7c4" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    <path d="M50 50 H65 V65" stroke="#c5a059" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-title">SAI GANESH</span>
+                    <span class="logo-subtitle">MARKETING</span>
+                    <span class="logo-tagline">SANITARYWARE • ELECTRICAL • TILES</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="categories.html">PRODUCTS</a></li>
+                <li><a href="projects.html" class="active">PROJECTS</a></li>
+                <li><a href="whychooseus.html">WHY CHOOSE US</a></li>
+                <li><a href="blogs.html">BLOG / NEWS</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>  
+            <div class="nav-actions">
+                <a href="categories.html" class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </a>
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>  
+    </header>  
+
+    <main>
+        <!-- Project Hero Header -->
+        <section class="about-hero project-hero" id="project-hero-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.8)), url('assets/hero-luxury-bath.jpeg'); min-height: 380px; padding-bottom: 60px;">
+            <div class="about-hero-container">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a> &gt; <a href="projects.html">Projects</a> &gt; <span id="project-breadcrumb-title">Case Study</span>
+                </nav>
+                <div class="about-hero-content" style="max-width: 950px;">
+                    <span class="section-tag" id="project-hero-tag" style="background-color: var(--accent-gold); color: var(--primary-color); margin-bottom: 15px;">PROJECT CASE STUDY</span>
+                    <h1 id="project-hero-title" style="font-size: clamp(2rem, 4.2vw, 3.2rem); line-height: 1.25; margin-bottom: 18px;">Project Title</h1>
+                    <div class="article-meta-info" style="display: flex; gap: 20px; align-items: center; font-size: 13px; color: rgba(255, 255, 255, 0.9); flex-wrap: wrap;">
+                        <span id="project-hero-location">📍 Jubilee Hills, Hyderabad</span>
+                        <span id="project-hero-sector">🏢 Residential</span>
+                        <span id="project-hero-status">✅ 100% Completed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Layout Section -->
+        <section class="projects-portfolio-section" style="background-color: var(--bg-white); padding-top: 60px; padding-bottom: 90px;">
+            <div class="details-page-layout">
+                
+                <!-- Left Main Case Study Panel (Wide Column) -->
+                <div class="details-main-panel">
+                    <article class="project-full-card">
+                        
+                        <!-- Featured Showcase Image -->
+                        <div class="project-featured-img-wrapper">
+                            <img id="project-featured-img" src="assets/hero-luxury-bath.jpeg" alt="Project Showcase Image">
+                        </div>
+
+                        <!-- Dynamic Case Study Narrative Content -->
+                        <div class="project-body-content" id="project-full-body">
+                            <!-- Injected dynamically via JS -->
+                        </div>
+
+                        <!-- Highlight Callout Box -->
+                        <div class="project-highlight-box" id="project-highlight-quote">
+                            "Sai Ganesh Marketing provided end-to-end supply coordination with zero material delays, ensuring every bathroom suite and flooring layout was installed with absolute perfection."
+                        </div>
+
+                        <!-- Supply Architecture & Technical Specifications Card -->
+                        <div class="project-specs-card">
+                            <span class="section-tag" style="margin-bottom: 10px; font-size: 10px;">MATERIAL REQUISITION</span>
+                            <h3>Supplied Architecture & Delivered Hardware</h3>
+                            <div class="project-specs-grid" id="project-specs-grid">
+                                <!-- Injected dynamically via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Outcome Summary Metric Badges -->
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 35px; background: var(--primary-color); border: 1px solid var(--accent-gold); border-radius: 6px; padding: 25px 15px; color: var(--text-light); text-align: center;">
+                            <div>
+                                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 4px;">100%</h4>
+                                <p style="font-size: 11px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 1px; margin: 0;">Quality Pass</p>
+                            </div>
+                            <div style="border-left: 1px solid rgba(197, 160, 89, 0.25); border-right: 1px solid rgba(197, 160, 89, 0.25);">
+                                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 4px;">0</h4>
+                                <p style="font-size: 11px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 1px; margin: 0;">Leak Defects</p>
+                            </div>
+                            <div>
+                                <h4 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 4px;" id="metric-timeline">4 Mos</h4>
+                                <p style="font-size: 11px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 1px; margin: 0;">Fulfillment</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Action Footer CTA -->
+                        <div class="article-footer-cta" style="margin-top: 45px; padding-top: 25px; border-top: 1.5px solid rgba(197, 160, 89, 0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                            <a href="projects.html" class="btn btn-secondary">← BACK TO ALL PROJECTS</a>
+                            <a href="#" class="btn btn-primary" id="project-inquire-btn">REQUEST SIMILAR PROJECT ESTIMATE <span class="arrow">→</span></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Sidebar (Sticky Column) -->
+                <aside class="details-sidebar">
+                    
+                    <!-- Factsheet Card -->
+                    <div class="sidebar-card prd-card" style="box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
+                        <h3 style="font-size: 1.25rem;">PROJECT FACTS</h3>
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                            <div class="project-fact-row">
+                                <span class="project-fact-label">LOCATION</span>
+                                <strong class="project-fact-value" id="fact-location">Hyderabad, Telangana</strong>
+                            </div>
+                            <div class="project-fact-row">
+                                <span class="project-fact-label">PROJECT TYPE / SECTOR</span>
+                                <strong class="project-fact-value" id="fact-category">Luxury Residential Villa</strong>
+                            </div>
+                            <div class="project-fact-row">
+                                <span class="project-fact-label">PARTNER BRANDS SUPPLIED</span>
+                                <strong class="project-fact-value" id="fact-brands">Jaquar Artize, Somany, Ashirvad</strong>
+                            </div>
+                            <div class="project-fact-row">
+                                <span class="project-fact-label">EXECUTION TIMELINE</span>
+                                <strong class="project-fact-value" id="fact-timeline">Completed in 4 Months</strong>
+                            </div>
+                            <div class="project-fact-row" style="border-bottom: none; padding-bottom: 0;">
+                                <span class="project-fact-label">CLIENT RATING</span>
+                                <strong class="project-fact-value" style="color: #12351a;">⭐⭐⭐⭐⭐ (100% Endorsed)</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Material Estimation CTA Box -->
+                    <div class="sidebar-card prd-card" style="border-color: var(--accent-gold); background-color: var(--bg-cream); text-align: center;">
+                        <span class="section-tag" style="margin-bottom: 10px; font-size: 10px;">BULK & BUILDER SUPPLY</span>
+                        <h4 style="font-size: 16.5px; color: var(--primary-color); font-weight: 700; margin-bottom: 8px;">Planning A Similar Build?</h4>
+                        <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">Get dedicated wholesale contractor pricing, product samples delivered to site, and expert plumbing calculations.</p>
+                        <a href="https://wa.me/919989640450" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 12px; border-radius: 4px;">WHATSAPP AN ENGINEER →</a>
+                    </div>
+
+                    <!-- Explore More Projects Directory -->
+                    <div class="sidebar-card prd-card">
+                        <h3 style="font-size: 1.25rem;">MORE CASE STUDIES</h3>
+                        <div class="recent-posts-list">
+                            <a href="project-details.html?id=luxury-villa-hyderabad" class="recent-post-link">
+                                <span class="recent-post-date">Residential</span>
+                                <h6>Luxury Villa - Hyderabad</h6>
+                            </a>
+                            <a href="project-details.html?id=corporate-office-bangalore" class="recent-post-link">
+                                <span class="recent-post-date">Commercial</span>
+                                <h6>Corporate Office - Bangalore</h6>
+                            </a>
+                            <a href="project-details.html?id=retail-store-mumbai" class="recent-post-link">
+                                <span class="recent-post-date">Retail</span>
+                                <h6>Retail Store - Mumbai</h6>
+                            </a>
+                            <a href="project-details.html?id=hotel-project-goa" class="recent-post-link">
+                                <span class="recent-post-date">Hospitality</span>
+                                <h6>Hotel Project - Goa</h6>
+                            </a>
+                            <a href="project-details.html?id=hospital-project-vizag" class="recent-post-link">
+                                <span class="recent-post-date">Healthcare</span>
+                                <h6>Hospital Project - Vizag</h6>
+                            </a>
+                            <a href="project-details.html?id=industrial-unit-pune" class="recent-post-link">
+                                <span class="recent-post-date">Industrial</span>
+                                <h6>Industrial Unit - Pune</h6>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Professional Corporate Footer -->
+    <footer class="professional-footer">
+        <div class="footer-container">
+            <!-- Col 1: Brand Info -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" stroke="#c5a059" stroke-width="3" fill="#12351A"/>
+                        <path d="M35 60 C 35 40, 50 30, 65 40 C 70 45, 70 55, 65 60 C 55 70, 40 70, 35 60" stroke="#c5a059" stroke-width="6" stroke-linecap="round" fill="none"/>
+                        <path d="M65 40 C 65 60, 50 70, 35 60 C 30 55, 30 45, 35 40 C 45 30, 60 30, 65 40" stroke="#f3e7c4" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M50 50 H65 V65" stroke="#c5a059" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <div class="footer-logo-text">
+                        <span class="f-title">SAI GANESH</span>
+                        <span class="f-subtitle">MARKETING</span>
+                    </div>
+                </div>
+                <p class="footer-desc">Your premium supplier for sanitaryware, electrical switchgears, lighting fixtures, CPVC piping, and designer vitrified tiles in Hyderabad.</p>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">i</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="YouTube">y</a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h4>QUICK NAVIGATION</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="categories.html">Products</a></li>
+                    <li><a href="projects.html">Projects Portfolio</a></li>
+                    <li><a href="whychooseus.html">Why Choose Us</a></li>
+                    <li><a href="blogs.html">Blog & News</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Solutions -->
+            <div class="footer-col">
+                <h4>OUR SOLUTIONS</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Sanitaryware Supply</a></li>
+                    <li><a href="services.html">Electrical Solutions</a></li>
+                    <li><a href="services.html">Tiles & Flooring Supply</a></li>
+                    <li><a href="services.html">Plumbing Engineering</a></li>
+                    <li><a href="services.html">End-to-End Project Execution</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact -->
+            <div class="footer-col footer-contact">
+                <h4>CONTACT INFO</h4>
+                <p>
+                    <strong>Address:</strong><br>
+                    1-215/1, Ganesh Temple Ln, Mylargadda, Padmarao Nagar, Secunderabad, Telangana 500061
+                </p>
+                <p>
+                    <strong>Phones:</strong><br>
+                    +91 9989640450<br>
+                    +91 630640450
+                </p>
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:potharam.srinivas@gmail.com">potharam.srinivas@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 Sai Ganesh Marketing. All Rights Reserved.</p>
+                <p>Developed by WeboraCo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Project Database Dictionary
+        const fullProjectDatabase = {
+            "luxury-villa-hyderabad": {
+                title: "Luxury Villa - Hyderabad",
+                tag: "RESIDENTIAL PROJECT",
+                location: "Jubilee Hills, Hyderabad, Telangana",
+                category: "Luxury Residential Villa",
+                brands: "Jaquar Artize, Somany, Ashirvad Pipes, Legrand",
+                timeline: "Completed in 4 Months",
+                timelineMetric: "4 Mos",
+                image: "assets/hero-luxury-bath.jpeg",
+                quote: "“Sai Ganesh Marketing supplied extraordinary bookmatched marble tiles and brushed gold sanitary suites with immaculate precision.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>This ultra-luxury private villa in Jubilee Hills, Hyderabad required an integrated supply of bespoke sanitaryware, Italian marble-finish large format vitrified tiles, and a zero-defect plumbing infrastructure designed for multi-decade durability.</p>
+                    
+                    <h4>Engineering Scope & Hydraulic Design</h4>
+                    <p>The villa featured expansive multi-story ceiling heights, high-pressure thermostatic shower columns across 5 master suites, and bespoke backlit LED mirror frameworks. SGM provided technical pipeline calculations ensuring consistent, silent water pressure at every level without hydraulic water hammering.</p>
+                    
+                    <h4>Architectural Tile Surfacing</h4>
+                    <p>Floor-to-ceiling bookmatched glazed vitrified slabs were delivered with laser-precise edge calibration. Wall-hung rimless commodes with concealed cisterns and brushed gold finish sensor faucets added refined understated elegance.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Jubilee Hills, Hyderabad, Telangana.",
+                    "<strong>Sanitaryware Supplied:</strong> Rimless wall-hung closets, countertop vanity basins, brushed gold faucets & rain shower panels.",
+                    "<strong>Flooring & Tiles:</strong> 1200x2400mm bookmatched glazed vitrified tiles with epoxy seamless grouting.",
+                    "<strong>Plumbing Pipelines:</strong> Ashirvad SDR-11 CPVC hot/cold distribution lines with pressure-tested isolation valves.",
+                    "<strong>Electrical & Lighting:</strong> Legrand modular switchgear, warm 3000K recessed architectural COB lights.",
+                    "<strong>Project Outcome:</strong> 100% on-time material fulfillment with zero post-installation defects."
+                ]
+            },
+            "corporate-office-bangalore": {
+                title: "Corporate Office - Bangalore",
+                tag: "COMMERCIAL PROJECT",
+                location: "Whitefield Tech Park, Bangalore",
+                category: "Commercial Tech Campus",
+                brands: "Jaquar Commercial, Prince Pipes, Schneider, Somany",
+                timeline: "Completed in 6 Months",
+                timelineMetric: "6 Mos",
+                image: "assets/showroom-brands.jpeg",
+                quote: "“Supplying 800+ workstations with zero leak defects and energy-saving lighting delivered immense value to our enterprise facility.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Sai Ganesh Marketing partnered with the lead civil contractors to deliver full-scale material distribution for a 4-storey IT corporate headquarters in Whitefield, Bangalore, accommodating over 800 workstations.</p>
+                    
+                    <h4>Commercial Restroom Engineering</h4>
+                    <p>High-traffic commercial restrooms required water-conserving auto-sensing sensor taps, dual-flush urinal sensors, and heavy-duty double charge vitrified flooring designed to withstand continuous foot traffic without loss of sheen.</p>
+                    
+                    <h4>Power Safety & Switchgear Distribution</h4>
+                    <p>Certified Schneider distribution boards, high-grade MCCBs, and energy-efficient glare-free 4000K LED office grid panel fixtures were supplied with full warranty documentation.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Whitefield, Bangalore Tech Park.",
+                    "<strong>Commercial Sanitary:</strong> Multi-stall sensor taps, urinal flush valves, and stainless steel grab bar accessories.",
+                    "<strong>Flooring Materials:</strong> Heavy-duty double charge anti-stain 800x1600mm vitrified tiles for lobby and corridors.",
+                    "<strong>Plumbing Infrastructure:</strong> Prince heavy-duty SWR acoustic drainage and multi-tier CPVC riser mains.",
+                    "<strong>Electrical Power:</strong> Schneider 4-tier distribution boards, MCBs, RCCBs, and glare-free 4000K panel lights.",
+                    "<strong>Project Outcome:</strong> Delivered under budget with LEED energy conservation compliance."
+                ]
+            },
+            "retail-store-mumbai": {
+                title: "Retail Store - Mumbai",
+                tag: "RETAIL PROJECT",
+                location: "Colaba Causeway, Mumbai",
+                category: "Luxury Fashion Storefront",
+                brands: "Somany, Cera, Havells, HB Group",
+                timeline: "Completed in 45 Days",
+                timelineMetric: "45 Days",
+                image: "assets/tiles-display-racks.jpeg",
+                quote: "“The matte anti-glare porcelain slabs and custom spotlight tracks helped us open our flagship fashion store 5 days ahead of schedule.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>A premier fashion boutique in Colaba Causeway, Mumbai demanded a rapid 45-day turnaround for durable, anti-slip porcelain display surfaces, modern lighting, and customer comfort facilities.</p>
+                    
+                    <h4>Display Surfacing & Ambience</h4>
+                    <p>Specialized matte-finish porcelain slabs were selected to prevent light glare while showcasing luxury apparel. Magnetic track lighting systems allow the client to adjust spotlight beams according to seasonal collection layouts.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Colaba Causeway, Mumbai.",
+                    "<strong>Surfaces & Slabs:</strong> Matte-finish slip-resistant porcelain tiles and acoustic feature wall panels.",
+                    "<strong>Lighting Systems:</strong> Magnetic track spotlights with 90+ CRI color rendering index.",
+                    "<strong>Restroom Fittings:</strong> Cera premium compact wall-hung closets and designer vessel sinks.",
+                    "<strong>Project Outcome:</strong> Delivered 5 days ahead of schedule, enabling an on-time grand opening."
+                ]
+            },
+            "hotel-project-goa": {
+                title: "Hotel Project - Goa",
+                tag: "HOSPITALITY PROJECT",
+                location: "Candolim Beach Resort, Goa",
+                category: "5-Star Beachfront Resort",
+                brands: "Jaquar Artize, Parryware, Sudhakar Pipes, Somany",
+                timeline: "Completed in 8 Months",
+                timelineMetric: "8 Mos",
+                image: "assets/faucets-collection.jpeg",
+                quote: "“Coastal salt air resistance was our biggest challenge. SGM supplied PVD-treated bath fittings and anti-skid pool pavers that perform flawlessly.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Supplying a 60-key luxury beachfront resort in Goa required coastal-grade materials capable of resisting salt-air corrosion, high humidity, and heavy seasonal guest volume.</p>
+                    
+                    <h4>Coastal Engineering & Anti-Corrosion Systems</h4>
+                    <p>All bathroom hardware featured PVD-coated anti-corrosion chrome and matte black finishes. Poolside decks were paved with certified R11 slip-resistant outdoor vitrified pavers.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Candolim Beach Resort, Goa.",
+                    "<strong>Luxury Guest Baths:</strong> Thermostatic shower columns, freestanding acrylic bathtubs, and dual-basin vanities.",
+                    "<strong>Outdoor Pavers:</strong> 20mm thick full-body porcelain pavers for pool deck and beachfront walkways.",
+                    "<strong>Water Infrastructure:</strong> Sudhakar high-diameter pipeline network with centralized water softening filtration.",
+                    "<strong>Project Outcome:</strong> High-praise resort guest reviews for shower performance and interior aesthetics."
+                ]
+            },
+            "hospital-project-vizag": {
+                title: "Hospital Project - Vizag",
+                tag: "HEALTHCARE PROJECT",
+                location: "Gajuwaka Medical Center, Vizag",
+                category: "Multi-Speciality Healthcare Center",
+                brands: "Prince Pipes, Cera Healthcare, Legrand, Hindware",
+                timeline: "Completed in 5 Months",
+                timelineMetric: "5 Mos",
+                image: "assets/pipes.webp",
+                quote: "“Strict NABH hospital hygiene compliance was achieved effortlessly thanks to SGM’s non-toxic lead-free plumbing and anti-microbial surfaces.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Strict NABH hygiene norms governed the material supply for this 120-bed multi-speciality medical center in Visakhapatnam.</p>
+                    
+                    <h4>Sterile Area Solutions & Medical Drainage</h4>
+                    <p>We supplied anti-microbial continuous-joint floor tiles, surgical scrub stations with elbow-operated long-lever taps, and lead-free non-toxic drainage piping certified for medical wastewater.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Gajuwaka Medical Center, Vizag, AP.",
+                    "<strong>Healthcare Sanitary:</strong> Anti-microbial surgical scrub sinks, wheelchair-accessible disabled-friendly toilets.",
+                    "<strong>Medical Plumbing:</strong> 100% lead-free Prince SWR and CPVC pipelines with acid-resistant jointing.",
+                    "<strong>Electrical Protection:</strong> Legrand medical-grade isolation transformers, sensitive RCCB ground-fault units.",
+                    "<strong>Project Outcome:</strong> 100% compliance on health inspector audit with a 15-year warranty guarantee."
+                ]
+            },
+            "industrial-unit-pune": {
+                title: "Industrial Unit - Pune",
+                tag: "INDUSTRIAL PROJECT",
+                location: "Chakan Industrial Zone, Pune",
+                category: "Automotive Manufacturing Facility",
+                brands: "Sudhakar Pipes, Ashirvad Industrial, Schneider Electric",
+                timeline: "Completed in 3 Months",
+                timelineMetric: "3 Mos",
+                image: "assets/plumbing.png",
+                quote: "“The heavy-duty chemical-resistant flooring and 16-bar drainage pipes endure massive forklift traffic without a scratch.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>An automotive manufacturing plant in Chakan, Pune required industrial-grade high-volume drainage, chemical-resistant shopfloor tiles, and high-bay warehouse LED illuminators.</p>
+                    
+                    <h4>Heavy Industrial Durability</h4>
+                    <p>Supplied high-diameter pressure pipes rated up to 16 bar and industrial acid-resistant tiles able to withstand forklift wheel pressures exceeding 5 tonnes.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Chakan Industrial Area, Pune.",
+                    "<strong>Industrial Flooring:</strong> Acid-resistant 15mm heavy-duty anti-static industrial tiles.",
+                    "<strong>Process Plumbing:</strong> Sudhakar & Ashirvad high-diameter industrial effluent drainage pipelines.",
+                    "<strong>High-Bay Lighting:</strong> IP65 waterproof 150W high-bay industrial LED fixtures with surge protection.",
+                    "<strong>Project Outcome:</strong> Heavy load resistant, robust pipeline durability certified for 20+ years."
+                ]
+            },
+            "banjara-hills-residence": {
+                title: "Banjara Hills Residence",
+                tag: "RESIDENTIAL PROJECT",
+                location: "Road No. 12, Banjara Hills, Hyderabad",
+                category: "Luxury Residential Duplex",
+                brands: "Cera, Somany, Jaquar, Prince Pipes",
+                timeline: "Completed in 3 Months",
+                timelineMetric: "3 Mos",
+                image: "assets/showroom-sanitaryware.jpeg",
+                quote: "“SGM designed a turnkey sanitaryware package that elevated our duplex bathroom suites to international standards.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Comprehensive luxury bath suites and polished vitrified tile distribution for an executive duplex residence in Banjara Hills, Hyderabad.</p>
+                    <h4>Scope Delivered</h4>
+                    <p>Concealed diverters, frameless glass shower fittings, and bookmatched marble-look wall slabs curated by SGM interior consultants.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Banjara Hills, Hyderabad.",
+                    "<strong>Fittings:</strong> Jaquar thermostatic shower heads and Cera rimless closets.",
+                    "<strong>Tiles:</strong> High-gloss 800x1600mm vitrified slabs for living and dining areas.",
+                    "<strong>Project Outcome:</strong> Finished ahead of schedule with 100% homeowner satisfaction."
+                ]
+            },
+            "jubilee-hills-villa": {
+                title: "Jubilee Hills Villa",
+                tag: "RESIDENTIAL PROJECT",
+                location: "Jubilee Hills, Hyderabad",
+                category: "Modern Contemporary Villa",
+                brands: "Somany, Cera, Ashirvad Pipes, Legrand",
+                timeline: "Completed in 4 Months",
+                timelineMetric: "4 Mos",
+                image: "assets/showroom-tiles.jpeg",
+                quote: "“The Italian marble-finish tiles gave our open-layout living spaces a majestic grandeur.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Supplied high-end Italian marble-finish tiles and designer bathroom wall panelling for an open-concept contemporary layout in Jubilee Hills.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Jubilee Hills, Hyderabad.",
+                    "<strong>Tiles:</strong> Italian marble finish double charge vitrified slabs.",
+                    "<strong>Plumbing:</strong> Leakage-proof Ashirvad CPVC pipeline network.",
+                    "<strong>Project Outcome:</strong> Flawless installation and exquisite architectural aesthetics."
+                ]
+            },
+            "secunderabad-tech-park": {
+                title: "Secunderabad Tech Park",
+                tag: "COMMERCIAL PROJECT",
+                location: "Padmarao Nagar / Secunderabad",
+                category: "Commercial Technology Center",
+                brands: "Prince Pipes, Sudhakar, Schneider, Cera",
+                timeline: "Completed in 5 Months",
+                timelineMetric: "5 Mos",
+                image: "assets/pipes.webp",
+                quote: "“Two years of flawless heavy-duty operation without a single drainage blockage or maintenance complaint.”",
+                body: `
+                    <h3>Executive Summary & Overview</h3>
+                    <p>Reliable commercial-grade plumbing, stormwater drainage, and sanitaryware installations for a modern multi-tenant commercial IT complex in Secunderabad.</p>
+                `,
+                specs: [
+                    "<strong>Client Location:</strong> Secunderabad, Telangana.",
+                    "<strong>Plumbing:</strong> High-diameter SWR drainage and CPVC water distribution mains.",
+                    "<strong>Sanitary:</strong> Water-efficient commercial sensor urinals and closets.",
+                    "<strong>Project Outcome:</strong> Zero maintenance complaints across 2 years of operation."
+                ]
+            }
+        };
+
+        // Project Page Dynamic Loader
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const projectId = params.get("id") || "luxury-villa-hyderabad";
+
+            const project = fullProjectDatabase[projectId] || fullProjectDatabase["luxury-villa-hyderabad"];
+
+            document.getElementById("page-title").innerText = project.title + " - Case Study | Sai Ganesh Marketing";
+            document.getElementById("project-breadcrumb-title").innerText = project.title;
+            document.getElementById("project-hero-tag").innerText = project.tag;
+            document.getElementById("project-hero-title").innerText = project.title;
+            document.getElementById("project-hero-location").innerText = "📍 " + project.location;
+            document.getElementById("project-hero-sector").innerText = "🏢 " + project.category;
+            
+            document.getElementById("project-featured-img").src = project.image;
+            document.getElementById("project-full-body").innerHTML = project.body;
+
+            if (project.quote) {
+                document.getElementById("project-highlight-quote").innerText = project.quote;
+            }
+
+            if (project.timelineMetric) {
+                document.getElementById("metric-timeline").innerText = project.timelineMetric;
+            }
+
+            // Factsheet
+            document.getElementById("fact-location").innerText = project.location;
+            document.getElementById("fact-category").innerText = project.category;
+            document.getElementById("fact-brands").innerText = project.brands;
+            document.getElementById("fact-timeline").innerText = project.timeline;
+
+            // Specifications Grid
+            const specsGrid = document.getElementById("project-specs-grid");
+            specsGrid.innerHTML = "";
+            project.specs.forEach(spec => {
+                const item = document.createElement("div");
+                item.className = "project-spec-item";
+                item.innerHTML = `
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>${spec}</span>
+                `;
+                specsGrid.appendChild(item);
+            });
+
+            // Modal CTA trigger
+            const inquireBtn = document.getElementById("project-inquire-btn");
+            if (inquireBtn) {
+                inquireBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    if (typeof openForm === "function") {
+                        openForm();
+                    } else {
+                        const modal = document.querySelector(".contact-form");
+                        if (modal) modal.classList.add("active");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
