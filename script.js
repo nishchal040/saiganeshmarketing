@@ -15,22 +15,48 @@ let slideInterval;
 
 // 1. Hero Slider Logic
 function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+    if (!slides || slides.length === 0) return;
     
-    slides[index].classList.add("active");
-    if (dots[index]) dots[index].classList.add("active");
-    current = index;
+    const total = slides.length;
+    current = ((index % total) + total) % total;
+
+    slides.forEach((slide, i) => {
+        if (i === current) {
+            slide.classList.add("active");
+        } else {
+            slide.classList.remove("active");
+        }
+    });
+
+    dots.forEach((dot, i) => {
+        if (i === current) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
 }
 
 function nextSlide() {
-    let next = (current + 1) % slides.length;
-    showSlide(next);
+    showSlide(current + 1);
+}
+
+function prevSlide() {
+    showSlide(current - 1);
+}
+
+function stopSlider() {
+    if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+    }
 }
 
 function startSlider() {
     stopSlider();
-    slideInterval = setInterval(nextSlide, 5000); // 5 seconds interval for luxury feel
+    if (slides.length > 1) {
+        slideInterval = setInterval(nextSlide, 5000); // 5 seconds interval for luxury feel
+    }
 }
 
 // 2. Sticky Header Scroll Effect
@@ -101,16 +127,43 @@ if (downloadBrochureBtn) {
 // Trigger Form load after 5 seconds
 document.addEventListener("DOMContentLoaded", () => {
     // Start slider if exists
-    if (slides.length > 0) {
+    if (slides && slides.length > 0) {
+        showSlide(0);
         startSlider();
         
         dots.forEach(dot => {
             dot.addEventListener("click", (e) => {
-                const slideIndex = parseInt(e.target.dataset.slide);
-                showSlide(slideIndex);
-                startSlider(); // Restart interval on user interaction
+                const slideIndex = parseInt(e.currentTarget.dataset.slide, 10);
+                if (!isNaN(slideIndex)) {
+                    showSlide(slideIndex);
+                    startSlider(); // Restart interval on user interaction
+                }
             });
         });
+
+        // Pause on hover over hero section
+        const heroSection = document.querySelector(".hero");
+        if (heroSection) {
+            heroSection.addEventListener("mouseenter", stopSlider);
+            heroSection.addEventListener("mouseleave", startSlider);
+
+            // Mobile swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            heroSection.addEventListener("touchstart", (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            heroSection.addEventListener("touchend", (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchStartX - touchEndX > 50) {
+                    nextSlide();
+                    startSlider();
+                } else if (touchEndX - touchStartX > 50) {
+                    prevSlide();
+                    startSlider();
+                }
+            }, { passive: true });
+        }
     }
 
     // Popup occurs ONLY ONCE and ONLY on the HOME PAGE
@@ -662,37 +715,39 @@ if (catalogModal) {
 
 // 11. Dedicated Blogs Page Logic (blogs.html)
 const blogSearchInput = document.getElementById("blog-search-input");
-const blogCategoryFilters = document.querySelectorAll("input[name='blog-category-filter']");
+const blogCategoryBtns = document.querySelectorAll(".blog-cat-btn");
 const blogItemCards = document.querySelectorAll(".blog-item-card");
 const noBlogsError = document.getElementById("no-blogs-error");
+
+let activeBlogCategory = "all";
 
 function filterBlogs() {
     if (blogItemCards.length === 0) return;
     
     const searchTerm = blogSearchInput ? blogSearchInput.value.toLowerCase().trim() : "";
-    let activeCategory = "all";
-    
-    blogCategoryFilters.forEach(radio => {
-        if (radio.checked) {
-            activeCategory = radio.value;
-        }
-    });
-    
     let visibleCount = 0;
     
     blogItemCards.forEach(card => {
-        const cardTitle = card.querySelector("h3").innerText.toLowerCase();
-        const cardSnippet = card.querySelector("p").innerText.toLowerCase();
-        const cardCategory = card.dataset.category;
+        const cardTitle = card.querySelector("h3") ? card.querySelector("h3").innerText.toLowerCase() : "";
+        const cardSnippet = card.querySelector("p") ? card.querySelector("p").innerText.toLowerCase() : "";
+        const cardCategory = (card.dataset.category || "").toLowerCase();
         
         const matchesSearch = searchTerm === "" || cardTitle.includes(searchTerm) || cardSnippet.includes(searchTerm);
-        const matchesCategory = activeCategory === "all" || cardCategory === activeCategory;
+        const matchesCategory = activeBlogCategory === "all" || cardCategory === activeBlogCategory.toLowerCase();
         
         if (matchesSearch && matchesCategory) {
-            card.style.display = "block";
+            card.style.display = "flex";
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "scale(1)";
+            }, 30);
             visibleCount++;
         } else {
-            card.style.display = "none";
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.96)";
+            setTimeout(() => {
+                card.style.display = "none";
+            }, 250);
         }
     });
     
@@ -701,16 +756,21 @@ function filterBlogs() {
     }
 }
 
+// Bind blog category buttons
+if (blogCategoryBtns.length > 0) {
+    blogCategoryBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            blogCategoryBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            activeBlogCategory = btn.dataset.cat || "all";
+            filterBlogs();
+        });
+    });
+}
+
 // Bind blog search inputs
 if (blogSearchInput) {
     blogSearchInput.addEventListener("input", filterBlogs);
-}
-
-// Bind blog categories list
-if (blogCategoryFilters.length > 0) {
-    blogCategoryFilters.forEach(radio => {
-        radio.addEventListener("change", filterBlogs);
-    });
 }
 
 // Full Article Content database map
@@ -802,6 +862,23 @@ const blogArticles = {
 
             <h4>Recommended Brands:</h4>
             <p>We stock energy-efficient spotlight lines and decorative LED strip panels from <strong>Philips</strong> and <strong>Anchor</strong> at wholesale prices.</p>
+        `
+    },
+    "waterproofing-adhesives": {
+        tag: "ADHESIVES & WATERPROOFING",
+        title: "Tile Adhesives & Waterproofing Grouts",
+        body: `
+            <p><strong>Introduction:</strong> Installing large-format vitrified slabs and bathroom claddings requires modern polymer-modified adhesives instead of traditional cement mortar.</p>
+            
+            <h4>Why Cement Mortar Fails for Large Slabs:</h4>
+            <ul>
+                <li><strong>Shrinkage Cracks:</strong> Sand-cement mixtures shrink as they dry, causing tiles to crack or sound hollow.</li>
+                <li><strong>Poor Adhesion to Vitrified Backs:</strong> Vitrified slabs have near-zero water absorption (&lt; 0.05%), meaning cement cannot mechanically anchor to them.</li>
+                <li><strong>Water Ingress:</strong> Porous cement joints allow water to seep behind walls, destroying paint and adjacent rooms.</li>
+            </ul>
+
+            <h4>Key Recommendations:</h4>
+            <p>Use high-tensile polymer adhesives (Type 2 / Type 3 certified) for slab bonding, and 100% solid epoxy waterproof grouts for joints. SGM stocks top adhesive brands from <strong>Laticrete</strong> and <strong>Roff</strong> with ready contractor bucket supply.</p>
         `
     }
 };

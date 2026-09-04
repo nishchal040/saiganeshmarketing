@@ -1,0 +1,23 @@
+{
+  "name": "Sai Ganesh Marketing",
+  "short_name": "SGM",
+  "description": "Premium Sanitaryware, CPVC Plumbing, Vitrified Tiles & Electrical Solutions in Secunderabad and Hyderabad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#12351a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/brand-logo-card.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/brand-logo-card.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "categories": ["business", "shopping", "construction"]
+}
