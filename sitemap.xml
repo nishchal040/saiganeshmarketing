@@ -10,16 +10,12 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/hero-luxury-bath.webp</image:loc>
-      <image:title>Sai Ganesh Marketing - Luxury Sanitaryware &amp; Tiles Showroom</image:title>
-      <image:caption>Complete Building Materials Solutions in Secunderabad and Hyderabad</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/showroom-tiles.webp</image:loc>
-      <image:title>Vitrified Floor &amp; Wall Slabs Display</image:title>
     </image:image>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/pipes-fittings.webp</image:loc>
-      <image:title>CPVC and UPVC Plumbing Pipelines and Valves</image:title>
     </image:image>
   </url>
 
@@ -31,7 +27,6 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/showroom-brands.webp</image:loc>
-      <image:title>About Sai Ganesh Marketing - Authorized Dealerships</image:title>
     </image:image>
   </url>
 
@@ -43,7 +38,6 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/showroom-sanitaryware.webp</image:loc>
-      <image:title>Building Material Supply and Plumbing Engineering Services</image:title>
     </image:image>
   </url>
 
@@ -55,15 +49,12 @@
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/luxury-sanitaryware.webp</image:loc>
-      <image:title>Sanitaryware and Closets Catalog</image:title>
     </image:image>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/showroom-tiles.webp</image:loc>
-      <image:title>Vitrified and Glazed Tiles Catalog</image:title>
     </image:image>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/electrical-lighting.webp</image:loc>
-      <image:title>Electrical Switchgears and Distribution Boards</image:title>
     </image:image>
   </url>
 
@@ -75,7 +66,6 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/hero-luxury-bath.webp</image:loc>
-      <image:title>Completed Residential and Commercial Projects Portfolio</image:title>
     </image:image>
   </url>
 
@@ -119,7 +109,6 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://saiganeshmarketing.vercel.app/assets/showroom-brands.webp</image:loc>
-      <image:title>Sai Ganesh Marketing Secunderabad Showroom Location</image:title>
     </image:image>
   </url>
 
