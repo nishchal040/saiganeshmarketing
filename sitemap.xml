@@ -25,7 +25,7 @@
 
   <!-- About Us -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/about.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/about</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -37,7 +37,7 @@
 
   <!-- Services -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/services.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/services</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -49,7 +49,7 @@
 
   <!-- Products & Categories -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/categories.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/categories</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -69,7 +69,7 @@
 
   <!-- Projects -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/projects.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/projects</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -81,7 +81,7 @@
 
   <!-- Project Details -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/project-details.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/project-details</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -89,7 +89,7 @@
 
   <!-- Why Choose Us -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/whychooseus.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/whychooseus</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -97,7 +97,7 @@
 
   <!-- Blogs & News -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/blogs.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/blogs</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -105,7 +105,7 @@
 
   <!-- Article Reader -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/article.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/article</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -113,7 +113,7 @@
 
   <!-- Contact Us -->
   <url>
-    <loc>https://saiganeshmarketing.vercel.app/contactus.html</loc>
+    <loc>https://saiganeshmarketing.vercel.app/contactus</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
