@@ -60,15 +60,17 @@ function startSlider() {
 }
 
 // 2. Sticky Header Scroll Effect
-window.addEventListener("scroll", () => {
+function updateHeaderScroll() {
     if (header) {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
         }
     }
-});
+}
+window.addEventListener("scroll", updateHeaderScroll, { passive: true });
+updateHeaderScroll();
 
 // 3. Navigation Active Highlight on Scroll (for hash anchors)
 const sections = document.querySelectorAll("section[id]");
