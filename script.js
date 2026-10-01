@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                    path === "/" || 
                    path.endsWith("/") || 
                    path === "" || 
-                   (!path.includes("about.html") && !path.includes("services.html") && !path.includes("categories.html") && !path.includes("projects.html") && !path.includes("whychooseus.html") && !path.includes("blogs.html") && !path.includes("contactus.html") && !path.includes("article.html"));
+                   (!path.includes("about") && !path.includes("services") && !path.includes("categories") && !path.includes("project") && !path.includes("whychooseus") && !path.includes("blog") && !path.includes("contactus") && !path.includes("article"));
 
     if (isHome && !sessionStorage.getItem("sgm_home_popup_shown")) {
         setTimeout(() => {
@@ -244,21 +244,50 @@ if (menu && menuOptions) {
 // 6. Email JS Form Submit
 function sendMail(e) {
     e.preventDefault();
+    const formEl = e.target;
+    const nameEl = formEl.querySelector("#name") || document.getElementById("name");
+    const emailEl = formEl.querySelector("#email") || document.getElementById("email");
+    const numberEl = formEl.querySelector("#number") || document.getElementById("number");
+    const categoryEl = formEl.querySelector("#category") || document.getElementById("category");
+    const areaEl = formEl.querySelector("#area") || document.getElementById("area");
+    const messageEl = formEl.querySelector("#message") || document.getElementById("message");
+
+    const submitBtn = formEl.querySelector("button[type='submit']");
+    const originalText = submitBtn ? submitBtn.innerText : "Submit";
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Sending...";
+    }
+
+    if (typeof emailjs === "undefined") {
+        alert("Email service is temporarily unavailable. Please WhatsApp us at +91 9989640450.");
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalText;
+        }
+        return;
+    }
 
     emailjs.send("service_wumsb9b", "template_k0zp5nd", {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        number: document.getElementById("number").value,
-        category: document.getElementById("category").value,
-        location: document.getElementById("area").value,
-        message: document.getElementById("message").value
+        name: nameEl ? nameEl.value : "",
+        email: emailEl ? emailEl.value : "",
+        number: numberEl ? numberEl.value : "",
+        category: categoryEl ? categoryEl.value : "",
+        location: areaEl ? areaEl.value : "",
+        message: messageEl ? messageEl.value : ""
     })
     .then(function() {
-        alert("Message Sent Successfully!");
-        document.querySelector("form").reset();
-        closeForm();
+        alert("Message Sent Successfully! Our team will get in touch with you shortly.");
+        formEl.reset();
+        if (typeof closeForm === "function") closeForm();
     }, function(error) {
-        alert("Failed to send message. Please try again.");
+        alert("Failed to send message. Please reach us on WhatsApp at +91 9989640450.");
+    })
+    .finally(function() {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalText;
+        }
     });
 }
 

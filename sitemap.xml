@@ -5,7 +5,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -22,7 +22,7 @@
   <!-- About Us -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/about</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -33,7 +33,7 @@
   <!-- Services -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/services</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -44,7 +44,7 @@
   <!-- Products & Categories -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/categories</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -61,7 +61,7 @@
   <!-- Projects -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/projects</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -72,7 +72,7 @@
   <!-- Project Details -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/project-details</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -80,7 +80,7 @@
   <!-- Why Choose Us -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/whychooseus</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -88,7 +88,7 @@
   <!-- Blogs & News -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/blogs</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -96,7 +96,7 @@
   <!-- Article Reader -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/article</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,7 +104,7 @@
   <!-- Contact Us -->
   <url>
     <loc>https://saiganeshmarketing.vercel.app/contactus</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
