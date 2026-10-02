@@ -67,10 +67,12 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    background: transparent;
-    box-shadow: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: padding 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    background: #f9f6ee;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 2px solid rgba(18, 53, 26, 0.15);
     padding: 22px 0;
 }
 .main-header.scrolled {
@@ -105,7 +107,7 @@ body {
     max-height: 60px;
     object-fit: contain;
     display: block;
-    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .logo:hover {
@@ -160,7 +162,7 @@ body {
 }
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-family: var(--font-alt);
     font-size: 13.5px;
     font-weight: 700;
@@ -171,7 +173,7 @@ body {
 }
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #dfc898;
+    color: #000000;
 }
 .nav-links li a::after {
     content: '';
@@ -180,29 +182,29 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #dfc898;
+    background-color: #000000;
     transition: var(--transition);
 }
 .nav-links li a:hover::after,
 .nav-links li a.active::after {
     width: 100%;
-    background-color: #dfc898;
+    background-color: #000000;
 }
 
 /* Scrolled Nav Link Colors on #f9f6ee */
 .main-header.scrolled .nav-links li a {
-    color: #12351a;
+    color: #000000;
 }
 .main-header.scrolled .nav-links li a:hover,
 .main-header.scrolled .nav-links li a.active {
     color: #000000;
 }
 .main-header.scrolled .nav-links li a::after {
-    background-color: #12351a;
+    background-color: #000000;
 }
 .main-header.scrolled .nav-links li a:hover::after,
 .main-header.scrolled .nav-links li a.active::after {
-    background-color: #12351a;
+    background-color: #000000;
 }
 
 .nav-actions {
