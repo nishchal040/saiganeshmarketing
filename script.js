@@ -568,79 +568,19 @@ if (brandFilters.length > 0) {
     });
 }
 
-// Catalog PDFs Map (Exclusively Verified Real SGM PDF Catalogs)
-const catalogPdfs = {
-    "Sanitaryware": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Bath & Sanitaryware Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Sanitaryware & Closets": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Bath & Sanitaryware Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Designer Basins & Vanities": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Bath & Sanitaryware Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Faucets, Mixers & Showers": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Faucets, Showers & Fittings (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Luxury Bath Suites": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Luxury Bath Suite Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Sanitaryware Fixtures": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Sanitaryware & Cisterns Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Bathroom Accessories": [
-        { title: "Sai Ganesh Marketing Sanitaryware & Bath Catalog (Vol. 1)", size: "1.4 MB", file: "assets/Sai Ganesh Marketing Sanitary.pdf" },
-        { title: "Sai Ganesh Marketing - Parryware Bath & Sanitaryware Price Book (Vol. 2)", size: "17.8 MB", file: "assets/Sai Ganesh Marketing Sanitary 2.pdf" }
-    ],
-    "Tiles": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Vitrified & Marble-Look Tiles": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Floor & Wall Cladding Slabs": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Glazed Vitrified Display Slabs": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Tile Finishes & Swatches": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Porcelain & Outdoor Anti-Skid Tiles": [
-        { title: "Sai Ganesh Marketing Tiles Catalog (Vol. 1 - 300x450mm Glossy & Highlighters)", size: "7.6 MB", file: "assets/Sai Ganesh Marketing Tiles.pdf" },
-        { title: "Sai Ganesh Marketing Linia Ceramic Tiles (Vol. 2 - Luxury Marble & Glossy Surfaces)", size: "2.4 MB", file: "assets/Sai Ganesh Marketing Tiles2.pdf" },
-        { title: "Sai Ganesh Marketing Designer Tiles & Surfaces (Vol. 3)", size: "1.5 MB", file: "assets/Sai Ganesh Marketing Tiles 3.pdf" }
-    ],
-    "Plumbing": [
-        { title: "Sai Ganesh Marketing - Ashirvad Pipes & Fittings Price List (Vol. 1 - FlowGuard CPVC, Aqualife UPVC & SWR)", size: "6.7 MB", file: "assets/Sai Ganesh Marketing Plumbing.pdf" }
-    ],
-    "CPVC & UPVC Piping Networks": [
-        { title: "Sai Ganesh Marketing - Ashirvad FlowGuard CPVC & Aqualife UPVC Catalog (Vol. 1)", size: "6.7 MB", file: "assets/Sai Ganesh Marketing Plumbing.pdf" }
-    ],
-    "Industrial Plumbing & Drainage": [
-        { title: "Sai Ganesh Marketing - Ashirvad SWR, Silent & Underground Drainage Catalog (Vol. 1)", size: "6.7 MB", file: "assets/Sai Ganesh Marketing Plumbing.pdf" }
-    ],
-    "Plumbing Conduits & Valves": [
-        { title: "Sai Ganesh Marketing - Ashirvad Valves, Tanks & FlowPro+ Catalog (Vol. 1)", size: "6.7 MB", file: "assets/Sai Ganesh Marketing Plumbing.pdf" }
-    ]
+// Catalog PDFs Map (Single Official Verified SGM Product Catalogue for all categories)
+const officialSgmCatalog = {
+    title: "Sai Ganesh Marketing Official Complete Product Catalogue",
+    subtitle: "Sanitaryware, Vitrified Tiles, CPVC Plumbing & Electrical Switchgears",
+    size: "2.5 MB",
+    file: "assets/Sai_Ganesh_Marketing_Catalogue.pdf"
 };
+
+const catalogPdfs = new Proxy({}, {
+    get: function(target, prop) {
+        return [officialSgmCatalog];
+    }
+});
 
 const catalogModal = document.getElementById("catalog-modal");
 const catalogModalTitle = document.getElementById("catalog-modal-title");
@@ -651,56 +591,37 @@ const catalogClose = document.getElementById("catalog-close");
 function openCatalogModal(categoryName) {
     if (!catalogModal) return;
     
-    // Look up exact or category fallback
-    let pdfs = catalogPdfs[categoryName];
-    if (!pdfs || pdfs.length === 0) {
-        if (categoryName.toLowerCase().includes("sanitary") || categoryName.toLowerCase().includes("basin") || categoryName.toLowerCase().includes("faucet") || categoryName.toLowerCase().includes("bath")) {
-            pdfs = catalogPdfs["Sanitaryware"];
-        } else if (categoryName.toLowerCase().includes("tile") || categoryName.toLowerCase().includes("slab") || categoryName.toLowerCase().includes("floor")) {
-            pdfs = catalogPdfs["Tiles"];
-        } else if (categoryName.toLowerCase().includes("plumb") || categoryName.toLowerCase().includes("pipe") || categoryName.toLowerCase().includes("drain")) {
-            pdfs = catalogPdfs["Plumbing"];
-        }
-    }
-    
-    // If no PDFs exist (e.g. Electrical), open inquiry form directly
-    if (!pdfs || pdfs.length === 0) {
-        openForm();
-        return;
-    }
-    
-    catalogModalTitle.innerText = `${categoryName} Catalogs`;
-    catalogModalTag.innerText = `${categoryName.toUpperCase()} CATALOGS`;
+    catalogModalTitle.innerText = `${categoryName} - Official Catalogue`;
+    catalogModalTag.innerText = `OFFICIAL SGM CATALOGUE`;
     
     // Clear and populate
     catalogDownloadList.innerHTML = "";
     
-    pdfs.forEach(pdf => {
-        const row = document.createElement("div");
-        row.className = "catalog-pdf-row";
-        const downloadUrl = pdf.file;
-        
-        row.innerHTML = `
-            <div class="pdf-row-info">
-                <div class="pdf-row-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                    </svg>
-                </div>
-                <div class="pdf-row-text">
-                    <h5>${pdf.title}</h5>
-                    <p>Format: PDF • Size: ${pdf.size} • <span style="color: var(--accent-gold); font-weight: 700;">● Official SGM Catalog</span></p>
-                </div>
+    const row = document.createElement("div");
+    row.className = "catalog-pdf-row";
+    const downloadUrl = "assets/Sai_Ganesh_Marketing_Catalogue.pdf";
+    
+    row.innerHTML = `
+        <div class="pdf-row-info">
+            <div class="pdf-row-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
             </div>
-            <div class="pdf-row-actions-group" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                <a href="${encodeURI(downloadUrl)}" target="_blank" rel="noopener noreferrer" class="pdf-row-action pdf-view-btn" title="Open and view PDF catalog in browser">VIEW <span class="arrow">↗</span></a>
-                <a href="${encodeURI(downloadUrl)}" download="Sai_Ganesh_Marketing_${pdf.title.replace(/[^a-zA-Z0-9]/g, '_')}.pdf" class="pdf-row-action pdf-download-btn" title="Download PDF to device">GET PDF <span class="arrow">↓</span></a>
+            <div class="pdf-row-text">
+                <h5>Sai Ganesh Marketing Official Product Catalogue</h5>
+                <p>Complete authorized catalogue covering ${categoryName}, Sanitaryware, Vitrified Tiles, CPVC Pipes &amp; Electrical switchgear.</p>
+                <p style="margin-top: 4px; font-weight: 600;">Format: PDF • Size: 2.5 MB • <span style="color: var(--accent-gold); font-weight: 700;">● Official SGM Catalogue</span></p>
             </div>
-        `;
-        
-        catalogDownloadList.appendChild(row);
-    });
+        </div>
+        <div class="pdf-row-actions-group" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <a href="${downloadUrl}" target="_blank" rel="noopener noreferrer" class="pdf-row-action pdf-view-btn" title="Open and view PDF catalogue in browser">VIEW <span class="arrow">↗</span></a>
+            <a href="${downloadUrl}" download="Sai_Ganesh_Marketing_Catalogue.pdf" class="pdf-row-action pdf-download-btn" title="Download PDF to device">GET PDF <span class="arrow">↓</span></a>
+        </div>
+    `;
+    
+    catalogDownloadList.appendChild(row);
     
     catalogModal.classList.add("show");
     document.body.style.overflow = "hidden";
