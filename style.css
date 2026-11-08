@@ -66,22 +66,32 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
-    transition: padding 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    background: #f9f6ee;
+    z-index: 1000;
+    transition: padding 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                background 0.35s ease, 
+                backdrop-filter 0.35s ease, 
+                -webkit-backdrop-filter 0.35s ease, 
+                box-shadow 0.35s ease, 
+                border-color 0.35s ease;
+    background: rgba(249, 246, 238, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 2px solid rgba(18, 53, 26, 0.15);
-    padding: 22px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 1.5px solid rgba(18, 53, 26, 0.12);
+    padding: 20px 0;
 }
 .main-header.scrolled {
-    background: #f9f6ee;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(249, 246, 238, 0.80);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
     padding: 12px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 2px solid rgba(18, 53, 26, 0.15);
+    box-shadow: 0 6px 25px rgba(18, 53, 26, 0.1);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.35);
 }
 .nav-container {
     display: flex;
@@ -173,7 +183,7 @@ body {
 }
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #000000;
+    color: var(--accent-gold);
 }
 .nav-links li a::after {
     content: '';
@@ -182,29 +192,29 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #000000;
+    background-color: var(--accent-gold);
     transition: var(--transition);
 }
 .nav-links li a:hover::after,
 .nav-links li a.active::after {
     width: 100%;
-    background-color: #000000;
+    background-color: var(--accent-gold);
 }
 
-/* Scrolled Nav Link Colors on #f9f6ee */
+/* Scrolled Nav Link Colors on Translucent Glass */
 .main-header.scrolled .nav-links li a {
-    color: #000000;
+    color: #12351a;
 }
 .main-header.scrolled .nav-links li a:hover,
 .main-header.scrolled .nav-links li a.active {
-    color: #000000;
+    color: var(--accent-gold);
 }
 .main-header.scrolled .nav-links li a::after {
-    background-color: #000000;
+    background-color: var(--accent-gold);
 }
 .main-header.scrolled .nav-links li a:hover::after,
 .main-header.scrolled .nav-links li a.active::after {
-    background-color: #000000;
+    background-color: var(--accent-gold);
 }
 
 .nav-actions {

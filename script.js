@@ -62,7 +62,7 @@ function startSlider() {
 // 2. Sticky Header Scroll Effect
 function updateHeaderScroll() {
     if (header) {
-        if (window.scrollY > 40) {
+        if (window.scrollY > 20) {
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
@@ -118,12 +118,9 @@ if (contactCtaBtn) {
     });
 }
 
-// Trigger Form on Brochure Download click
+// Brochure Download Action (native PDF download allowed)
 if (downloadBrochureBtn) {
-    downloadBrochureBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        openForm();
-    });
+    // Allows direct download of assets/Sai_Ganesh_Marketing_Catalogue.pdf
 }
 
 // Trigger Form load after 5 seconds
@@ -516,7 +513,9 @@ if (lightboxModal) {
 const categorySearchInput = document.getElementById("category-search-input");
 const categoryCards = document.querySelectorAll(".category-item-card");
 const brandFilters = document.querySelectorAll("input[name='brand-filter']");
+const catTypeButtons = document.querySelectorAll("#cat-type-filters .blog-cat-btn");
 const noCategoriesError = document.getElementById("no-categories-error");
+let activeCategoryType = "all";
 
 // Filter categories dynamically
 function filterCategories() {
@@ -534,16 +533,27 @@ function filterCategories() {
     let visibleCount = 0;
     
     categoryCards.forEach(card => {
-        const cardTitle = card.querySelector("h3").innerText.toLowerCase();
-        const cardBrands = card.dataset.brands.split(" ");
+        const cardTitle = card.querySelector("h3") ? card.querySelector("h3").innerText.toLowerCase() : "";
+        const cardTag = card.querySelector(".project-tag") ? card.querySelector(".project-tag").innerText.toLowerCase() : "";
+        const cardDesc = card.querySelector("p") ? card.querySelector("p").innerText.toLowerCase() : "";
+        const cardBrands = (card.dataset.brands || "").split(" ");
+        const cardCat = (card.dataset.category || "").toLowerCase();
         
-        const matchesSearch = searchTerm === "" || cardTitle.includes(searchTerm);
+        const matchesSearch = searchTerm === "" || 
+                              cardTitle.includes(searchTerm) || 
+                              cardTag.includes(searchTerm) || 
+                              cardDesc.includes(searchTerm);
+                              
+        const matchesCategory = activeCategoryType === "all" || cardCat === activeCategoryType;
+        
         const matchesBrand = activeBrandFilter === "all" || 
                              cardBrands.includes(activeBrandFilter) ||
                              (activeBrandFilter === "ashirvad" && (cardBrands.includes("ashirvad") || cardBrands.includes("prince"))) ||
-                             (activeBrandFilter === "prince" && (cardBrands.includes("ashirvad") || cardBrands.includes("prince")));
+                             (activeBrandFilter === "prince" && (cardBrands.includes("ashirvad") || cardBrands.includes("prince"))) ||
+                             (activeBrandFilter === "legrand" && (cardBrands.includes("legrand") || cardBrands.includes("schneider"))) ||
+                             (activeBrandFilter === "polycab" && (cardBrands.includes("polycab") || cardBrands.includes("havells")));
         
-        if (matchesSearch && matchesBrand) {
+        if (matchesSearch && matchesCategory && matchesBrand) {
             card.style.display = "block";
             visibleCount++;
         } else {
@@ -566,6 +576,31 @@ if (brandFilters.length > 0) {
     brandFilters.forEach(radio => {
         radio.addEventListener("change", filterCategories);
     });
+}
+
+// Bind department/category filter buttons
+if (catTypeButtons.length > 0) {
+    catTypeButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            catTypeButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            activeCategoryType = btn.dataset.cat || "all";
+            filterCategories();
+        });
+    });
+
+    // Check URL parameters for direct filtering (e.g. categories.html?cat=electrical)
+    const urlParams = new URLSearchParams(window.location.search);
+    const catQuery = urlParams.get("cat");
+    if (catQuery) {
+        const matchingBtn = document.querySelector(`#cat-type-filters .blog-cat-btn[data-cat='${catQuery}']`);
+        if (matchingBtn) {
+            catTypeButtons.forEach(b => b.classList.remove("active"));
+            matchingBtn.classList.add("active");
+            activeCategoryType = catQuery;
+            filterCategories();
+        }
+    }
 }
 
 // Catalog PDFs Map (Single Official Verified SGM Product Catalogue for all categories)
