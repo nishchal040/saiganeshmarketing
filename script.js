@@ -607,7 +607,6 @@ if (catTypeButtons.length > 0) {
 const officialSgmCatalog = {
     title: "Sai Ganesh Marketing Official Complete Product Catalogue",
     subtitle: "Sanitaryware, Vitrified Tiles, CPVC Plumbing & Electrical Switchgears",
-    size: "2.5 MB",
     file: "assets/Sai_Ganesh_Marketing_Catalogue.pdf"
 };
 
@@ -647,7 +646,7 @@ function openCatalogModal(categoryName) {
             <div class="pdf-row-text">
                 <h5>Sai Ganesh Marketing Official Product Catalogue</h5>
                 <p>Complete authorized catalogue covering ${categoryName}, Sanitaryware, Vitrified Tiles, CPVC Pipes &amp; Electrical switchgear.</p>
-                <p style="margin-top: 4px; font-weight: 600;">Format: PDF • Size: 2.5 MB • <span style="color: var(--accent-gold); font-weight: 700;">● Official SGM Catalogue</span></p>
+                <p style="margin-top: 4px; font-weight: 600;"><span style="color: var(--accent-gold); font-weight: 700;">● Official SGM Catalogue</span></p>
             </div>
         </div>
         <div class="pdf-row-actions-group" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
